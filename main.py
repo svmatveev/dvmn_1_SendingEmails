@@ -1,18 +1,21 @@
 import smtplib
 import getpass
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+f_name = "Евпатий"
+s_name = "Сергей"
+subject = "Приглашение!"
 
 ref_link = "https://dvmn.org/referrals/99I26R95e7TOhFwppYNEMUVMvPsOGOCb4aDnxOZY/"
 link_tag = r"%website%"
-
 name_tag = r"%friend_name%"
-f_name = "Евпатий"
-
 self_name_tag = r"%my_name%"
-s_name = "Сергей"
 
-sender_address = "svmatveev1988@yandex.ru"
-receiver_address = "svmatveev1988@gmail.com"
-subject = "Приглашение!"
+sender_address = os.getenv("SENDER_DVMN")
+receiver_address = os.getenv("RECEIVER_DVMN")
 
 header = f"""From: {sender_address}
 To: {receiver_address}
