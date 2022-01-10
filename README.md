@@ -14,7 +14,7 @@ run main.py script, enter sender pass at console dialogue
 
 **Authors**
 
-    [Sergey M](svmatveev1988@yandex.ru)
+[Sergey M](mailto:svmatveev1988@yandex.ru)
 
 **License**
 
